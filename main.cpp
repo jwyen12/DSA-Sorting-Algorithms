@@ -15,6 +15,13 @@ int main(){
     int arr3[] = {9,6,7,14,5,4,3,2,1};
     sorting::insertionSort(arr3, 9);
     for(int i = 0; i<9; i++) std::cout << arr3[i] << " ";
+    std::cout << std::endl;
+
+    int arr4[] = {9,6,7,14,5,4,3,2,1};
+    sorting::quickSort(arr4, 0, 8);
+    for(int i = 0; i<9; i++) std::cout << arr4[i] << " ";
+    std::cout << std::endl;
+
 
     return 0;
 }

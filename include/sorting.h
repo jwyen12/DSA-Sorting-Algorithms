@@ -8,6 +8,7 @@ namespace sorting {
     void selectionSort(int (&arr)[], int size);
     void mergeSort(int (&arr)[], int left, int right);
     void quickSort(int (&arr)[], int low, int high);
+    int partition(int (&arr)[], int low, int high);
 }
 
 
