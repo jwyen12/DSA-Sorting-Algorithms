@@ -3,12 +3,12 @@
 
 
 namespace sorting {
-    void insertionSort(int (&arr)[], int size);
-    void bubbleSort(int (&arr)[], int size);
-    void selectionSort(int (&arr)[], int size);
+    void insertionSort(int arr[], int size);
+    void bubbleSort(int arr[], int size);
+    void selectionSort(int arr[], int size);
     void mergeSort(int arr[], int left, int right);
-    void quickSort(int (&arr)[], int low, int high);
-    int partition(int (&arr)[], int low, int high);
+    void quickSort(int arr[], int low, int high);
+    int partition(int arr[], int low, int high);
     void merge(int arr[], int low, int mid, int high);
 }
 

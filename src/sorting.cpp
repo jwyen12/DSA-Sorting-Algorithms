@@ -2,7 +2,7 @@
 #include <climits>
 
 namespace sorting{
-    void insertionSort(int (&arr)[], int size){
+    void insertionSort(int arr[], int size){
         for(int i = 1; i<size; i++){
             int key = arr[i];
             int j = i -1;
@@ -16,7 +16,7 @@ namespace sorting{
     }
 
 
-    void bubbleSort(int (&arr)[], int size){
+    void bubbleSort(int arr[], int size){
         for(int i = 0; i < size; i++){
             for(int j = 1; j<size-i; j++){
                 if(arr[j] < arr[j-1]){
@@ -29,7 +29,7 @@ namespace sorting{
     }
 
 
-    void selectionSort(int (&arr)[], int size){
+    void selectionSort(int arr[], int size){
         int min = INT_MAX;
         int minIndex = 0;
         for(int i = 0; i<size; i++){
@@ -88,7 +88,7 @@ namespace sorting{
 }
 
 
-    void quickSort(int (&arr)[], int low, int high){
+    void quickSort(int arr[], int low, int high){
         if(low < high){
             int p = partition(arr,low,high);
             quickSort(arr, low, p-1);
@@ -97,7 +97,7 @@ namespace sorting{
     }
 
 
-    int partition(int (&arr)[], int low, int high) {
+    int partition(int arr[], int low, int high) {
         int pivot = arr[high];
         int i = (low - 1);
 
