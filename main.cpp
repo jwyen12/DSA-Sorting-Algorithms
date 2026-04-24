@@ -22,6 +22,11 @@ int main(){
     for(int i = 0; i<9; i++) std::cout << arr4[i] << " ";
     std::cout << std::endl;
 
+    int arr5[] = {9,6,7,14,5,4,3,2,1,12, 11, 13, 5, 6, 7};
+    sorting::mergeSort(arr5, 0, 14);
+    for(int i = 0; i<15; i++) std::cout << arr5[i] << " ";
+    std::cout << std::endl;
+
 
     return 0;
 }

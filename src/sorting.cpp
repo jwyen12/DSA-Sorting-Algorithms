@@ -48,8 +48,44 @@ namespace sorting{
 
 
     void mergeSort(int arr[], int left, int right){
+        if (left < right) {
+        int mid = left + (right - left) / 2;
 
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+        }
     }
+
+
+    void merge(int arr[], int low, int mid, int high) {
+        int n1 = mid - low + 1;
+        int n2 = high - mid;
+
+        int* left = new int[n1];
+        int* right = new int[n2];
+
+        for (int i = 0; i < n1; i++)
+            left[i] = arr[low + i];
+        for (int j = 0; j < n2; j++)
+            right[j] = arr[mid + 1 + j];
+
+        int i = 0, j = 0, k = low;
+        while (i < n1 && j < n2) {
+            if (left[i] <= right[j]) {
+                arr[k] = left[i++];
+            } else {
+                arr[k] = right[j++];
+            }
+            k++;
+        }
+
+        while (i < n1) arr[k++] = left[i++];
+        while (j < n2) arr[k++] = right[j++];
+
+        delete[] left;
+        delete[] right;
+}
 
 
     void quickSort(int (&arr)[], int low, int high){
@@ -80,5 +116,4 @@ namespace sorting{
 
         return (i + 1);
 }
-
 }
